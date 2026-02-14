@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChatHistory">
+    <accountData>
+      <list>
+        <AccountData>
+          <accountId value="VXNlcjo5MDY4Mjc=" />
+          <chats>
+            <list>
+              <chat>
+                <accountId value="VXNlcjo5MDY4Mjc=" />
+                <internalId value="313fc39e-ea1e-4108-8b3f-7697bfed17ee" />
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="i am creating pytest playwright framework from scratch" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="&lt;html&gt;&lt;b&gt; Cody encountered an error when processing your message:&lt;/b&gt;&lt;br&gt;&lt;div marginwidth=10&quot; marginheight=&quot;10&quot;&gt;&amp;#9888;  {&quot;message&quot;:&quot;status 401, reason completions are not enabled&quot;,&quot;type&quot;:&quot;completions_disabled&quot;}&#10;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/html&gt;" />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2026-02-14T02:10:54.5713613" />
+              </chat>
+            </list>
+          </chats>
+          <defaultLlm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </defaultLlm>
+        </AccountData>
+      </list>
+    </accountData>
     <chats>
       <list>
         <chat>
+          <accountId value="VXNlcjo5MDY4Mjc=" />
           <internalId value="c6444209-7988-4455-9d37-2a432e43300f" />
           <llm>
             <llm>
@@ -12,6 +48,23 @@
               <title value="Claude 3 Sonnet" />
             </llm>
           </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjo5MDY4Mjc=" />
+          <internalId value="313fc39e-ea1e-4108-8b3f-7697bfed17ee" />
+          <messages>
+            <list>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="i am creating pytest playwright framework from scratch" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value="&lt;html&gt;&lt;b&gt; Cody encountered an error when processing your message:&lt;/b&gt;&lt;br&gt;&lt;div marginwidth=10&quot; marginheight=&quot;10&quot;&gt;&amp;#9888;  {&quot;message&quot;:&quot;status 401, reason completions are not enabled&quot;,&quot;type&quot;:&quot;completions_disabled&quot;}&#10;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/html&gt;" />
+              </message>
+            </list>
+          </messages>
+          <updatedAt value="2026-02-14T02:10:54.5713613" />
         </chat>
       </list>
     </chats>
