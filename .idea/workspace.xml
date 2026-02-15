@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d9d9798-f04e-4482-b041-7b592a81d8fa" name="Changes" comment="" />
+    <list default="true" id="6d9d9798-f04e-4482-b041-7b592a81d8fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_auth_testcases.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth_testcases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_practice.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +40,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration.executor": "Run",
+    "Python tests.Python tests for test_auth_testcases.test_User_registration.executor": "Run",
     "Python tests.Python tests for test_practice.test_open_google.executor": "Run",
     "RunOnceActivity.ChatTagsLlmMigration": "true",
     "RunOnceActivity.ClientConfigCleanupMigration": "true",
@@ -51,7 +59,42 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\91861\PycharmProjects\pytest_plawright_framework_scratch\tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration">
+    <configuration name="Python tests for test_auth_testcases.test_TC_01_User_registration" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pytest_plawright_framework_scratch" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_auth_testcases.test_TC_01_User_registration&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_auth_testcases.test_User_registration" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pytest_plawright_framework_scratch" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_auth_testcases.test_User_registration&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_practice.test_open_google" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pytest_plawright_framework_scratch" />
       <option name="ENV_FILES" value="" />
@@ -69,6 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration" />
+        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_User_registration" />
         <item itemvalue="Python tests.Python tests for test_practice.test_open_google" />
       </list>
     </recent_temporary>
