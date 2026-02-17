@@ -16,7 +16,7 @@ def browser_context():
 
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_makereport(item, call):
+def pytest_runtest_makereport(item):
     # Let pytest and other hooks run, and get the report
     outcome = yield
     result = outcome.get_result()
@@ -25,7 +25,7 @@ def pytest_runtest_makereport(item, call):
     screenshot_path = None
 
     # Only act on failures in the 'call' phase (the actual test body)
-    if result.failed and result.when == call:
+    if result.failed and result.when == "call":
         page = item.funcargs.get("page", None)
 
         if page:
