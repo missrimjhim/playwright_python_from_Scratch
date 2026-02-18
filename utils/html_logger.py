@@ -8,7 +8,7 @@ import html
 
 
 class HTMLLogger:
-    def __init__(self, output_dir="reports", filename=None):
+    def __init__(self, pytest_config, output_dir="reports", filename="execution.html"):
         """
         Initialize the HTML logger.
 
@@ -16,17 +16,12 @@ class HTMLLogger:
         - Generates a timestamped filename if none is provided
         - Prepares a list to store log messages
         """
-        project_root = Path(__file__).resolve().parent.parent
+        project_root = pytest_config.rootpath
         # Force reports folder to be created at project root
         self.output_dir = project_root / output_dir
 
         # Ensure the directory exists (create if missing)
         self.output_dir.mkdir(parents=True, exist_ok=True)
-
-        # If no filename is provided, generate one using a timestamp
-        if filename is None:
-            timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-            filename = f"log-{timestamp}.html"
 
         # Full path to the HTML report file
         self.filepath = self.output_dir / filename
@@ -82,7 +77,6 @@ class HTMLLogger:
 
         # Open the HTML file for writing
         with open(self.filepath, "w", encoding="utf-8") as f:
-
             # Start HTML document and CSS styles
             f.write("<html><head><style>")
             f.write("""
@@ -110,3 +104,9 @@ class HTMLLogger:
 
             # Close HTML document
             f.write("</body></html>")
+
+    def info(self, msg):
+        self.log("STEP", msg)
+
+    def banner(self, msg):
+        self.log("VERIFY", f"===== {msg} =====")
