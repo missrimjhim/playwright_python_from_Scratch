@@ -2,7 +2,6 @@ from playwright.sync_api import Page, expect
 from utils.execution_logger import ExecutionLogger
 
 
-
 class LoginPage:
     def __init__(self, page: Page):
         self.page = page
@@ -18,29 +17,45 @@ class LoginPage:
         self.continue_button = page.get_by_role("button", name="Continue")
 
     def register_first_time(self, firstname, lastname, password, email):
+        ExecutionLogger.log("Click Register link")
         self.register_link.click()
+
         ExecutionLogger.log(f"Entering firstname: {firstname}")
         self.firstname_input.fill(firstname)
+
         ExecutionLogger.log(f"Entering lastname: {lastname}")
         self.lastname_input.fill(lastname)
+
         ExecutionLogger.log(f"Entering email: {email}")
         self.email_input.fill(email)
-        ExecutionLogger.log("Entering password:")
+
+        ExecutionLogger.log("Entering password")
         self.password_input.fill(password)
-        ExecutionLogger.log("Entering confirmed password:")
+
+        ExecutionLogger.log("Entering confirmed password")
         self.confirmed_password_input.fill(password)
-        ExecutionLogger.log("Click the login button")
+
+        ExecutionLogger.log("Click Register button")
         self.login_button.click()
 
     def validate_registration(self):
         try:
-            expect(self.page.locator("div.result")).to_contain_text("Your registration completed")
-            ExecutionLogger.html_logger.verify("Login successful — dashboard visible")
+            ExecutionLogger.verify("Verify registration success message")
+            expect(self.page.locator("div.result")).to_contain_text(
+                "Your registration completed"
+            )
+
+            ExecutionLogger.log("Click Continue button")
             self.continue_button.click()
+
+            ExecutionLogger.verify("Verify home page title")
             expect(self.page).to_have_title("Demo Web Shop")
-            expect(self.page.locator("a.account", has_text=".com")).to_contain_text(".com")
-        except Exception:
-            ExecutionLogger.html_logger.error("Login failed — dashboard not found")
-            raise
 
+            ExecutionLogger.verify("Verify user email is displayed")
+            expect(
+                self.page.locator("a.account", has_text="@gmail.com")
+            ).to_be_visible()
 
+        except Exception as e:
+            ExecutionLogger.error("Registration failed – expected elements not found")
+            raise e
