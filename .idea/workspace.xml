@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d9d9798-f04e-4482-b041-7b592a81d8fa" name="Changes" comment="updated test file">
-      <change afterPath="$PROJECT_DIR$/pages/pagemanager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/excel_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_allure.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run_allure.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/pagemanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pagemanager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_auth_testcases.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth_testcases.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +46,8 @@
     "Batch.run_allure.bat.executor": "Run",
     "Batch.run_allure.executor": "Run",
     "Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration.executor": "Run",
+    "Python tests.Python tests for test_auth_testcases.test_TC_02_Login_with_valid_credentials.executor": "Run",
+    "Python tests.Python tests for test_auth_testcases.test_TC_03_Login_with_valid_credentials.executor": "Run",
     "Python tests.Python tests for test_auth_testcases.test_User_registration.executor": "Run",
     "Python tests.Python tests for test_practice.test_open_google.executor": "Run",
     "RunOnceActivity.ChatTagsLlmMigration": "true",
@@ -62,7 +64,7 @@
     "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/achowds8/PycharmProjects/playwright_python_from_Scratch",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -73,11 +75,11 @@
       <recent name="C:\Users\91861\PycharmProjects\pytest_plawright_framework_scratch\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration">
+  <component name="RunManager" selected="Python tests.Python tests for test_auth_testcases.test_TC_02_Login_with_valid_credentials">
     <configuration name="run_allure" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="pytest_plawright_framework_scratch" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../91861/PycharmProjects/pytest_plawright_framework_scratch" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="run_allure.bat" />
       <option name="PARAMETERS" value="" />
@@ -98,6 +100,36 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_auth_testcases.test_TC_02_Login_with_valid_credentials" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pytest_plawright_framework_scratch" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_auth_testcases.test_TC_02_Login_with_valid_credentials&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_auth_testcases.test_TC_03_Login_with_valid_credentials" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pytest_plawright_framework_scratch" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_auth_testcases.test_TC_03_Login_with_valid_credentials&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_auth_testcases.test_User_registration" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pytest_plawright_framework_scratch" />
       <option name="ENV_FILES" value="" />
@@ -113,27 +145,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_practice.test_open_google" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="pytest_plawright_framework_scratch" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_practice.test_open_google&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration" />
+        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_02_Login_with_valid_credentials" />
         <item itemvalue="Batch.run_allure" />
+        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_03_Login_with_valid_credentials" />
         <item itemvalue="Python tests.Python tests for test_auth_testcases.test_User_registration" />
-        <item itemvalue="Python tests.Python tests for test_practice.test_open_google" />
+        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration" />
       </list>
     </recent_temporary>
   </component>
