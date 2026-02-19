@@ -1,9 +1,9 @@
 import os
 import platform
-from pathlib import Path
 import pytest
 import allure
 from playwright.sync_api import sync_playwright
+from pages.pagemanager import PageManager
 from utils.execution_logger import ExecutionLogger
 
 
@@ -36,7 +36,7 @@ def pytest_runtest_call(item):
 # Test end – capture status
 # -------------------------------
 @pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):
+def pytest_runtest_makereport(item):
     outcome = yield
     result = outcome.get_result()
 
@@ -97,6 +97,16 @@ def page(browser_context, request):
 
     page.close()
 
+# -------------------------------
+# Centralized Pages Fixture
+# -------------------------------
+
+
+@pytest.fixture
+def pages(page):
+    """Returns PageManager containing all page objects"""
+    return PageManager(page)
+
 
 def pytest_sessionstart(session):
     results_dir = session.config.option.allure_report_dir
@@ -109,3 +119,4 @@ def pytest_sessionstart(session):
         f.write(f"BaseURL={session.config.getini('base_url')}\n")
         f.write(f"OS={platform.system()} {platform.release()}\n")
         f.write(f"Python={platform.python_version()}\n")
+

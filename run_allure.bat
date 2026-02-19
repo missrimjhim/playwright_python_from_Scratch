@@ -3,7 +3,10 @@ echo ================================
 echo Running Pytest with Allure
 echo ================================
 REM Go to project root (this bat file location)
-cd /d %~dp0
+cd /d "%~dp0"
+
+echo Current directory:
+cd
 
 echo Cleaning screenshots folder...
 if exist screenshots (
