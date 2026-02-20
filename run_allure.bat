@@ -31,8 +31,6 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b %ERRORLEVEL%
 )
 
-echo Opening Report...
-start tests\allure-report\index.html
 
 
 
