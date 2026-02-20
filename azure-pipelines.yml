@@ -19,7 +19,7 @@ steps:
 
 # Run 
 - script: |
-    source .venv/bin/activate
+    call .venv/bin/activate
     pytest -v --alluredir=tests/allure-results
   displayName: 'Run Pytest'
   continueOnError: true   # ensures report generates even if tests fail
@@ -27,7 +27,10 @@ steps:
 
 # Generate allure_html files
 
-- script: run_allure.bat
+- script: 
+    call .venv/bin/activate
+    run_allure.bat
+
   workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Generate Allure Single HTML Report'
 
