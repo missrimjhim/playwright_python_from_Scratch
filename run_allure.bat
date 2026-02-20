@@ -19,14 +19,21 @@ if exist allure-report (
 )
 
 REM Run pytest and generate allure results
-
 echo Running Pytest...
 pytest -v --alluredir=tests\allure-results
 
-echo Generating Allure HTML report...
-.\allure\bin\allure.bat generate tests\allure-results --clean -o allure-report
+echo Generating Single File Allure Report...
+call "%~dp0allure\bin\allure.bat" generate tests\allure-results --clean --single-file -o tests\allure-report
 
-echo Opening Allure Report...
-.\allure\bin\allure.bat open allure-report
+IF %ERRORLEVEL% NEQ 0 (
+    echo Allure report generation failed!
+    pause
+    exit /b %ERRORLEVEL%
+)
+
+echo Opening Report...
+start tests\allure-report\index.html
+
+
 
 
