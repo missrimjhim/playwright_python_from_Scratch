@@ -27,7 +27,7 @@ call "%~dp0allure\bin\allure.bat" generate tests\allure-results --clean --single
 
 IF %ERRORLEVEL% NEQ 0 (
     echo Allure report generation failed!
-    pause
+
     exit /b %ERRORLEVEL%
 )
 
