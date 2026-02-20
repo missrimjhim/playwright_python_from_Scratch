@@ -12,7 +12,7 @@ echo Activating virtual environment...
 call .venv\Scripts\activate
 
 echo Installing Python packages...
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 
 IF %ERRORLEVEL% NEQ 0 (
     echo Package installation failed!
