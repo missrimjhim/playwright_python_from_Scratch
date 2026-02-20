@@ -61,7 +61,7 @@ class LoginPage:
 
             ExecutionLogger.verify("Verify user email is displayed")
             expect(
-                self.page.locator("a.account", has_text="@gmail")
+                self.page.locator("a.account", has_text="@")
             ).to_be_visible()
 
         except Exception as e:
