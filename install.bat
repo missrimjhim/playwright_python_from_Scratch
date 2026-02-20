@@ -30,4 +30,3 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 echo Setup completed successfully!
-pause
