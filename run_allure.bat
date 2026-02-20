@@ -19,8 +19,8 @@ if exist allure-report (
 )
 
 REM Run pytest and generate allure results
-echo Running Pytest...
-.venv\Scripts\python -m pytest -v --alluredir=tests\allure-results
+echo off Running Pytest...
+echo off .venv\Scripts\python -m pytest -v --alluredir=tests\allure-results
 
 echo Generating Single File Allure Report...
 call "%~dp0allure\bin\allure.bat" generate tests\allure-results --clean --single-file -o tests\allure-report
