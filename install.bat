@@ -12,7 +12,7 @@ echo Activating virtual environment...
 call .venv\Scripts\activate
 
 echo Installing Python packages...
-python -m pip install -r requirement.txt
+.venv\Scripts\python -m pip install -r requirement.txt
 
 IF %ERRORLEVEL% NEQ 0 (
     echo Package installation failed!
@@ -21,7 +21,7 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 echo Installing Playwright browsers...
-python -m playwright install
+.venv\Scripts\python -m playwright install
 
 IF %ERRORLEVEL% NEQ 0 (
     echo Playwright browser installation failed!
