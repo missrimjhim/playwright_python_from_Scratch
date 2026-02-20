@@ -14,6 +14,7 @@ steps:
 
 # Create venv and install dependencies
 - script: install.bat
+  workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Set up Virtual Env and Install Dependencies & Playwright Browsers'
 
 # Run 
@@ -24,10 +25,10 @@ steps:
   continueOnError: true   # ensures report generates even if tests fail
 
 
+# Generate allure_html files
 
-
-- script: |
-    run_allure.bat
+- script: run_allure.bat
+  workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Generate Allure Single HTML Report'
 
 # Publish Allure Report as Artifact
