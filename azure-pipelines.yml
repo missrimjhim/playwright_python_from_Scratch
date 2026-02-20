@@ -1,0 +1,39 @@
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+steps:
+
+# Install Python
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.12'
+  displayName: 'Use Python 3.12'
+
+# Create venv and install dependencies
+- script: install.bat
+  displayName: 'Set up Virtual Env and Install Dependencies & Playwright Browsers'
+
+# Run 
+- script: |
+    source .venv/bin/activate
+    pytest -v --alluredir=tests/allure-results
+  displayName: 'Run Pytest'
+  continueOnError: true   # ensures report generates even if tests fail
+
+
+
+
+- script: |
+    run_allure.bat
+  displayName: 'Generate Allure Single HTML Report'
+
+# Publish Allure Report as Artifact
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: 'tests/allure-report'
+    artifactName: 'AllureReport'
+    publishLocation: 'Container'
+  displayName: 'Publish Allure Report'
