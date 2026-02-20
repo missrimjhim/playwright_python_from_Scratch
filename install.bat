@@ -3,6 +3,14 @@ echo =================================
 echo Setting up Automation Framework
 echo =================================
 
+cd /d %~dp0
+
+echo Creating virtual environment...
+python -m venv .venv
+
+echo Activating virtual environment...
+call .venv\Scripts\activate
+
 echo Installing Python packages...
 pip install -r requirements.txt
 
