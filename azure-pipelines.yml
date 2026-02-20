@@ -41,7 +41,7 @@ steps:
 # Generate Allure Report
 # -------------------------------
 - script: |
-    run_allure.bat
+    call "%~dp0allure\bin\allure.bat" generate tests\allure-results --clean --single-file -o tests\allure-report
   workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Generate Allure Single HTML Report'
 
