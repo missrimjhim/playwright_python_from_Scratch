@@ -6,35 +6,52 @@ pool:
 
 steps:
 
-# Install Python
+# -------------------------------
+# Use Python
+# -------------------------------
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.12'
   displayName: 'Use Python 3.12'
 
-# Create venv and install dependencies
-- script: install.bat
+
+# -------------------------------
+# Create venv & Install Dependencies
+# -------------------------------
+- script: |
+    python -m venv .venv
+    .venv\Scripts\python -m pip install --upgrade pip
+    .venv\Scripts\python -m pip install -r requirement.txt
+    .venv\Scripts\python -m playwright install
   workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Set up Virtual Env and Install Dependencies & Playwright Browsers'
 
-# Run 
+
+# -------------------------------
+# Run Pytest
+# -------------------------------
 - script: |
-    source .venv/bin/activate
-    pytest -v --alluredir=tests/allure-results
+    .venv\Scripts\python -m pytest -v --alluredir=tests\allure-results
+  workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Run Pytest'
-  continueOnError: true   # ensures report generates even if tests fail
+  continueOnError: true
 
 
-# Generate allure_html files
-
-- script: run_allure.bat
+# -------------------------------
+# Generate Allure Report
+# -------------------------------
+- script: |
+    allure generate tests\allure-results --clean --single-file -o tests\allure-report
   workingDirectory: $(Build.SourcesDirectory)
   displayName: 'Generate Allure Single HTML Report'
 
-# Publish Allure Report as Artifact
+
+# -------------------------------
+# Publish Allure Report
+# -------------------------------
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: 'tests/allure-report'
+    pathToPublish: 'tests\allure-report'
     artifactName: 'AllureReport'
     publishLocation: 'Container'
   displayName: 'Publish Allure Report'
