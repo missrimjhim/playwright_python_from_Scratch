@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d9d9798-f04e-4482-b041-7b592a81d8fa" name="Changes" comment="updated test file">
-      <change afterPath="$PROJECT_DIR$/utils/excel_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/pagemanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pagemanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/testdata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/testdata.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_auth_testcases.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth_testcases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/excel_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/excel_reader.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +41,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Batch.run_allure (1).executor": "Run",
-    "Batch.run_allure (2).executor": "Run",
-    "Batch.run_allure.bat.executor": "Run",
-    "Batch.run_allure.executor": "Run",
-    "Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration.executor": "Run",
-    "Python tests.Python tests for test_auth_testcases.test_TC_02_Login_with_valid_credentials.executor": "Run",
-    "Python tests.Python tests for test_auth_testcases.test_TC_03_Login_with_valid_credentials.executor": "Run",
-    "Python tests.Python tests for test_auth_testcases.test_User_registration.executor": "Run",
-    "Python tests.Python tests for test_practice.test_open_google.executor": "Run",
-    "RunOnceActivity.ChatTagsLlmMigration": "true",
-    "RunOnceActivity.ClientConfigCleanupMigration": "true",
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
-    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.DeprecatedChatLlmMigration": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/achowds8/PycharmProjects/playwright_python_from_Scratch",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Batch.run_allure (1).executor&quot;: &quot;Run&quot;,
+    &quot;Batch.run_allure (2).executor&quot;: &quot;Run&quot;,
+    &quot;Batch.run_allure.bat.executor&quot;: &quot;Run&quot;,
+    &quot;Batch.run_allure.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_auth_testcases.test_TC_02_Login_with_valid_credentials.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_auth_testcases.test_TC_03_Login_with_valid_credentials.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_auth_testcases.test_User_registration.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_practice.test_open_google.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ChatTagsLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ClientConfigCleanupMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountsIdsRefresh&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyMigrateChatHistory-v2&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.DeprecatedChatLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/achowds8/PycharmProjects/playwright_python_from_Scratch&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\91861\PycharmProjects\pytest_plawright_framework_scratch" />
@@ -148,10 +150,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_02_Login_with_valid_credentials" />
-        <item itemvalue="Batch.run_allure" />
-        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_03_Login_with_valid_credentials" />
-        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_User_registration" />
         <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_01_User_registration" />
+        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_TC_03_Login_with_valid_credentials" />
+        <item itemvalue="Batch.run_allure" />
+        <item itemvalue="Python tests.Python tests for test_auth_testcases.test_User_registration" />
       </list>
     </recent_temporary>
   </component>

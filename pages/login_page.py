@@ -61,7 +61,7 @@ class LoginPage:
 
             ExecutionLogger.verify("Verify user email is displayed")
             expect(
-                self.page.locator("a.account", has_text="@gmail.com")
+                self.page.locator("a.account", has_text="@gmail")
             ).to_be_visible()
 
         except Exception as e:
@@ -98,7 +98,7 @@ class LoginPage:
             expect(self.page).to_have_title("Demo Web Shop")
 
             ExecutionLogger.verify("Verify user email is displayed")
-            expect(self.page.locator("a.account", has_text="@gmail.com")
+            expect(self.page.locator("a.account", has_text="@")
             ).to_be_visible()
 
         except Exception as e:

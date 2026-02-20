@@ -8,8 +8,14 @@ class ExcelReader:
     path_1 = os.path.join(base_dir, "testdata", "testdata.xlsx")
 
     def __init__(self, sheet_name: str = "Sheet1"): # Centralized path construction
-        base_dir = os.getcwd() # project root
-        self.file_path = os.path.join(base_dir, "testdata", "testdata.xlsx")
+
+        # Directory of excel_reader.py → project/utils
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # Go up one level → project/
+        project_root = os.path.dirname(current_dir)
+        # Now point to project/testdata/testdata.xlsx
+        self.file_path = os.path.join(project_root, "testdata", "testdata.xlsx")
+
         self.sheet_name = sheet_name
         self.workbook = openpyxl.load_workbook(self.file_path)
         self.sheet = self.workbook[self.sheet_name]

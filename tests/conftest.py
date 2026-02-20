@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 import platform
 import pytest
@@ -39,6 +40,12 @@ def pytest_runtest_call(item):
 def pytest_runtest_makereport(item):
     outcome = yield
     result = outcome.get_result()
+    # Base directory of this conftest.py file
+    CONF_DIR = os.path.dirname(os.path.abspath(__file__))
+    # Screenshot directory inside your project
+    BASE_DIR=os.path.dirname(CONF_DIR)
+    screenshots = os.path.join(BASE_DIR, "screenshots")
+    os.makedirs(screenshots, exist_ok=True)
 
     if result.when == "call":
         status = "PASS" if result.passed else "FAIL"
@@ -48,7 +55,11 @@ def pytest_runtest_makereport(item):
         if result.failed:
             page = item.funcargs.get("page")
             if page:
-                screenshot = page.screenshot()
+                timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+                test_name = item.name.replace(" ", "_")
+                filename = f"{test_name}_{timestamp}.png"
+                filepath = os.path.join(screenshots, filename)
+                screenshot = page.screenshot(path=filepath, full_page=True)
                 allure.attach(
                     screenshot,
                     name="Failure Screenshot",
